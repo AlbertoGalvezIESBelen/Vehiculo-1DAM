@@ -8,11 +8,17 @@ package vehiculo;
 public class Main {
     
       public static void main(String[] args) {
-        VehiculoXXX2223 miVehiculoXXX2223;
+        VehiculoAGG2324 miVehiculoXXX2223;
         int stockActual;
         
-        miVehiculoXXX2223 = new VehiculoXXX2223("Seat",18000,100);
-        try 
+        miVehiculoXXX2223 = new VehiculoAGG2324("Seat",18000,100);
+        operativaVehiculosAGG2324(miVehiculoXXX2223); 
+        stockActual = miVehiculoXXX2223.obtenerStock();
+        System.out.println("El stock actual es "+ stockActual );
+    }
+
+    public static void operativaVehiculosAGG2324(VehiculoAGG2324 miVehiculoXXX2223) {
+        try
         {
             System.out.println("Venta de Vehiculos");
             miVehiculoXXX2223.vender(20);
@@ -29,8 +35,6 @@ public class Main {
         {
             System.out.print("Fallo al comprar");
         }
-        stockActual = miVehiculoXXX2223.obtenerStock();
-        System.out.println("El stock actual es "+ stockActual );
     }
 
 }

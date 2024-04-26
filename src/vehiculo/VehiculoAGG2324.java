@@ -5,7 +5,7 @@ package vehiculo;
  *
  * @author 
  */
-public class VehiculoXXX2223 {
+public class VehiculoAGG2324 {
 
     private String nombre;
     private double precio;
@@ -13,13 +13,13 @@ public class VehiculoXXX2223 {
     private int stock;
 
     /* Constructor sin argumentos */
-    public VehiculoXXX2223 ()
+    public VehiculoAGG2324 ()
     {
     }
     // Constructor con parámetro para iniciar todas las propiedades de la clase
     
     
-    public VehiculoXXX2223 (String nom, double precio, int stock)
+    public VehiculoAGG2324 (String nom, double precio, int stock)
     {
         this.nombre =nom;
         this.precio=precio;
