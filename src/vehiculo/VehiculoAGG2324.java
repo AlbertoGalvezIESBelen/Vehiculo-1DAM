@@ -2,8 +2,11 @@
 package vehiculo;
 
 /**
- *
- * @author 
+ * 
+ * @author Usuario
+ * @version 
+ * @since 
+ * @see 
  */
 public class VehiculoAGG2324 {
 
@@ -18,32 +21,48 @@ public class VehiculoAGG2324 {
     }
     // Constructor con parámetro para iniciar todas las propiedades de la clase
     
-    
+    /**
+     * Constructor con parámetros
+     * @param nom nombre del vehículo
+     * @param precio precio de venta del vehículo
+     * @param stock número de unidades en stock
+     */
     public VehiculoAGG2324 (String nom, double precio, int stock)
     {
         this.nombre =nom;
         this.precio=precio;
         this.stock=stock;
     }
-   // Método para asignar el nombre del vehiculo
+    /**
+     * Método para asignar el nombre del vehículo
+     * @param nom 
+     */
     public void asignarNombre(String nom)
     {
         setNombre(nom);
     }
-    // Método que me devuelve el nombre del vehiculo
+    /**
+     * Método para obtener nombre del vehículo
+     * @return 
+     */
     public String obtenerNombre()
     {
         return getNombre();
     }
 
-    // Método que me devuelve el stock de vehiculos disponible en cada momento
+    /**
+     * Método para obtener el stock de un vehículo
+     * @return 
+     */
      public int obtenerStock ()
     {
         return getStock();
     }
 
-    /* Método para comprar vehiculos. Modifica el stock.
-     * Este método va a ser probado con Junit
+    /**
+     * 
+     * @param cantidad
+     * @throws Exception 
      */
     public void comprar(int cantidad) throws Exception
     {
@@ -52,6 +71,11 @@ public class VehiculoAGG2324 {
         setStock(getStock() + cantidad);
     }
 
+    /**
+     * 
+     * @param cantidad
+     * @throws Exception 
+     */
     public void vender (int cantidad) throws Exception
     {
         if (cantidad <= 0)
@@ -62,14 +86,16 @@ public class VehiculoAGG2324 {
     }
 
     /**
-     * @return the nombre
+     * Método de selección del atributo nombre
+     * @return
      */
     public String getNombre() {
         return nombre;
     }
 
     /**
-     * @param nombre the nombre to set
+     * Método de acceso del atributo nombre
+     * @param nombre 
      */
     public void setNombre(String nombre) {
         this.nombre = nombre;
