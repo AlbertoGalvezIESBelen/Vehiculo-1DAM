@@ -4,9 +4,8 @@ package vehiculo;
 /**
  * 
  * @author Usuario
- * @version 
- * @since 
- * @see 
+ * @version 1.0
+ * @since 26/04/24
  */
 public class VehiculoAGG2324 {
 
