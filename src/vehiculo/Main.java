@@ -12,12 +12,12 @@ public class Main {
         int stockActual;
         
         miVehiculoXXX2223 = new VehiculoAGG2324("Seat",18000,100);
-        operativaVehiculosAGG2324(miVehiculoXXX2223); 
+        operativaVehiculosAGG2324(miVehiculoXXX2223, 50); 
         stockActual = miVehiculoXXX2223.obtenerStock();
         System.out.println("El stock actual es "+ stockActual );
     }
 
-    public static void operativaVehiculosAGG2324(VehiculoAGG2324 miVehiculoXXX2223) {
+    public static void operativaVehiculosAGG2324(VehiculoAGG2324 miVehiculoXXX2223, Integer cantidad) {
         try
         {
             System.out.println("Venta de Vehiculos");

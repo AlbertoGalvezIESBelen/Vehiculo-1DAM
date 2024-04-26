@@ -7,10 +7,10 @@ package vehiculo;
  */
 public class VehiculoAGG2324 {
 
-    private String nombre;
-    private double precio;
-    private double precioIVA;
-    private int stock;
+    protected String nombre;
+    protected double precio;
+    protected double precioIVA;
+    protected int stock;
 
     /* Constructor sin argumentos */
     public VehiculoAGG2324 ()
@@ -28,18 +28,18 @@ public class VehiculoAGG2324 {
    // Método para asignar el nombre del vehiculo
     public void asignarNombre(String nom)
     {
-        nombre=nom;
+        setNombre(nom);
     }
     // Método que me devuelve el nombre del vehiculo
     public String obtenerNombre()
     {
-        return nombre;
+        return getNombre();
     }
 
     // Método que me devuelve el stock de vehiculos disponible en cada momento
      public int obtenerStock ()
     {
-        return stock;
+        return getStock();
     }
 
     /* Método para comprar vehiculos. Modifica el stock.
@@ -49,7 +49,7 @@ public class VehiculoAGG2324 {
     {
         if (cantidad<0)
             throw new Exception("No se puede comprar un nº negativo de vehiculos");
-        stock = stock + cantidad;
+        setStock(getStock() + cantidad);
     }
 
     public void vender (int cantidad) throws Exception
@@ -58,7 +58,63 @@ public class VehiculoAGG2324 {
             throw new Exception ("No se puede vender una cantidad negativa de vehiculos");
         if (obtenerStock()< cantidad)
             throw new Exception ("No se hay suficientes vehiculos para vender");
-        stock = stock - cantidad;
+        setStock(getStock() - cantidad);
+    }
+
+    /**
+     * @return the nombre
+     */
+    public String getNombre() {
+        return nombre;
+    }
+
+    /**
+     * @param nombre the nombre to set
+     */
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    /**
+     * @return the precio
+     */
+    public double getPrecio() {
+        return precio;
+    }
+
+    /**
+     * @param precio the precio to set
+     */
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+
+    /**
+     * @return the precioIVA
+     */
+    public double getPrecioIVA() {
+        return precioIVA;
+    }
+
+    /**
+     * @param precioIVA the precioIVA to set
+     */
+    public void setPrecioIVA(double precioIVA) {
+        this.precioIVA = precioIVA;
+    }
+
+    /**
+     * @return the stock
+     */
+    public int getStock() {
+        return stock;
+    }
+
+    /**
+     * @param stock the stock to set
+     */
+    public void setStock(int stock) {
+        this.stock = stock;
     }
     
 }  
